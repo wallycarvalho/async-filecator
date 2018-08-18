@@ -1,0 +1,30 @@
+{
+  "name": "async-readdir",
+  "version": "1.0.0",
+  "description": "A small library that promises readdir",
+  "main": "dist/async-readdir.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c config/rollup.config.js && uglifyjs --compress --mangle -o dist/bundle.js -- dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallycarvalho/async-readdir.git"
+  },
+  "author": "wallycarvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallycarvalho/async-readdir/issues"
+  },
+  "homepage": "https://github.com/wallycarvalho/async-readdir#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.5.0",
+    "regenerator-runtime": "^0.12.1",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  }
+}
