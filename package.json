@@ -17,6 +17,9 @@
     "url": "https://github.com/wallycarvalho/async-filecator/issues"
   },
   "homepage": "https://github.com/wallycarvalho/async-filecator#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
