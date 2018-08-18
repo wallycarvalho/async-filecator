@@ -3,7 +3,7 @@ const { readdirPromise, fstatPromise }  = require('./fs-promises');
 
 const rootTestFolder = path.dirname(__dirname);
 
-const recursiveReaddir = async (inputArr, fileOpts, specOpts) => {
+const asyncReaddir = async (inputArr, fileOpts, specOpts) => {
   const inputPath = inputArr.pop();
   const spec = specOpts || { ext: 'spec.js' };
 
@@ -33,4 +33,4 @@ const recursiveReaddir = async (inputArr, fileOpts, specOpts) => {
 };
 
 
-module.exports = { recursiveReaddir };
+module.exports = { asyncReaddir };
