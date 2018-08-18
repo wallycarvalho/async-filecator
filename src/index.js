@@ -29,7 +29,7 @@ const asyncReaddir = async (inputArr, fileOpts, specOpts) => {
       return acc;
     }, { directories: [], specs: [] });
 
-  return directories.length > 0 ? [ ...specs, ...(await recursiveReaddir([...inputArr, ...directories])) ] : specs
+  return directories.length > 0 ? [ ...specs, ...(await asyncReaddir([...inputArr, ...directories])) ] : specs
 };
 
 
