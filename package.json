@@ -2,7 +2,7 @@
   "name": "async-readdir",
   "version": "1.0.0",
   "description": "A small library that promises readdir",
-  "main": "dist/async-readdir.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "jest",
     "build": "rollup -c config/rollup.config.js && uglifyjs --compress --mangle -o dist/bundle.js -- dist/bundle.js"
