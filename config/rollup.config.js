@@ -9,7 +9,7 @@ export default {
   },
   external: ['path', 'fs'],
   plugins: [
-    resolve(),
+    // resolve(),
     babel({
       exclude: 'node_modules/**' // only transpile our source code
     })

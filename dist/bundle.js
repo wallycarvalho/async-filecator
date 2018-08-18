@@ -1,1 +1,137 @@
-"use strict";function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var fs=_interopDefault(require("fs")),path=_interopDefault(require("path")),readdirPromise=function(e){for(var r=arguments.length,t=Array(r>1?r-1:0),n=1;n<r;n++)t[n-1]=arguments[n];return new Promise(function(r,n){fs.readdir.apply(fs,[e].concat(t,[function(e,t){e&&n(e),r(t)}]))})},fstatPromise=function(e){return new Promise(function(r,t){fs.stat(e,function(n,o){n&&t(n),r(Object.assign(o,{file:e}))})})},_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},jsx=function(){var e="function"==typeof Symbol&&Symbol.for&&Symbol.for("react.element")||60103;return function(r,t,n,o){var a=r&&r.defaultProps,i=arguments.length-3;if(t||0===i||(t={}),t&&a)for(var u in a)void 0===t[u]&&(t[u]=a[u]);else t||(t=a||{});if(1===i)t.children=o;else if(i>1){for(var c=Array(i),l=0;l<i;l++)c[l]=arguments[l+3];t.children=c}return{$$typeof:e,type:r,key:void 0===n?null:""+n,ref:null,props:t,_owner:null}}}(),asyncIterator=function(e){if("function"==typeof Symbol){if(Symbol.asyncIterator){var r=e[Symbol.asyncIterator];if(null!=r)return r.call(e)}if(Symbol.iterator)return e[Symbol.iterator]()}throw new TypeError("Object is not async iterable")},asyncGenerator=function(){function e(e){this.value=e}function r(r){function t(e,r){return new Promise(function(t,o){var u={key:e,arg:r,resolve:t,reject:o,next:null};i?i=i.next=u:(a=i=u,n(e,r))})}function n(t,a){try{var i=r[t](a),u=i.value;u instanceof e?Promise.resolve(u.value).then(function(e){n("next",e)},function(e){n("throw",e)}):o(i.done?"return":"normal",i.value)}catch(e){o("throw",e)}}function o(e,r){switch(e){case"return":a.resolve({value:r,done:!0});break;case"throw":a.reject(r);break;default:a.resolve({value:r,done:!1})}a=a.next,a?n(a.key,a.arg):i=null}var a,i;this._invoke=t,"function"!=typeof r.return&&(this.return=void 0)}return"function"==typeof Symbol&&Symbol.asyncIterator&&(r.prototype[Symbol.asyncIterator]=function(){return this}),r.prototype.next=function(e){return this._invoke("next",e)},r.prototype.throw=function(e){return this._invoke("throw",e)},r.prototype.return=function(e){return this._invoke("return",e)},{wrap:function(e){return function(){return new r(e.apply(this,arguments))}},await:function(r){return new e(r)}}}(),asyncGeneratorDelegate=function(e,r){function t(t,n){return o=!0,n=new Promise(function(r){r(e[t](n))}),{done:!1,value:r(n)}}var n={},o=!1;return"function"==typeof Symbol&&Symbol.iterator&&(n[Symbol.iterator]=function(){return this}),n.next=function(e){return o?(o=!1,e):t("next",e)},"function"==typeof e.throw&&(n.throw=function(e){if(o)throw o=!1,e;return t("throw",e)}),"function"==typeof e.return&&(n.return=function(e){return t("return",e)}),n},asyncToGenerator=function(e){return function(){var r=e.apply(this,arguments);return new Promise(function(e,t){function n(o,a){try{var i=r[o](a),u=i.value}catch(e){return void t(e)}if(!i.done)return Promise.resolve(u).then(function(e){n("next",e)},function(e){n("throw",e)});e(u)}return n("next")})}},classCallCheck=function(e,r){if(!(e instanceof r))throw new TypeError("Cannot call a class as a function")},createClass=function(){function e(e,r){for(var t=0;t<r.length;t++){var n=r[t];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(r,t,n){return t&&e(r.prototype,t),n&&e(r,n),r}}(),defineEnumerableProperties=function(e,r){for(var t in r){var n=r[t];n.configurable=n.enumerable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,t,n)}return e},defaults=function(e,r){for(var t=Object.getOwnPropertyNames(r),n=0;n<t.length;n++){var o=t[n],a=Object.getOwnPropertyDescriptor(r,o);a&&a.configurable&&void 0===e[o]&&Object.defineProperty(e,o,a)}return e},defineProperty=function(e,r,t){return r in e?Object.defineProperty(e,r,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[r]=t,e},_extends=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var t=arguments[r];for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])}return e},get=function e(r,t,n){null===r&&(r=Function.prototype);var o=Object.getOwnPropertyDescriptor(r,t);if(void 0===o){var a=Object.getPrototypeOf(r);return null===a?void 0:e(a,t,n)}if("value"in o)return o.value;var i=o.get;if(void 0!==i)return i.call(n)},inherits=function(e,r){if("function"!=typeof r&&null!==r)throw new TypeError("Super expression must either be null or a function, not "+typeof r);e.prototype=Object.create(r&&r.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),r&&(Object.setPrototypeOf?Object.setPrototypeOf(e,r):e.__proto__=r)},_instanceof=function(e,r){return null!=r&&"undefined"!=typeof Symbol&&r[Symbol.hasInstance]?r[Symbol.hasInstance](e):e instanceof r},interopRequireDefault=function(e){return e&&e.__esModule?e:{default:e}},interopRequireWildcard=function(e){if(e&&e.__esModule)return e;var r={};if(null!=e)for(var t in e)Object.prototype.hasOwnProperty.call(e,t)&&(r[t]=e[t]);return r.default=e,r},newArrowCheck=function(e,r){if(e!==r)throw new TypeError("Cannot instantiate an arrow function")},objectDestructuringEmpty=function(e){if(null==e)throw new TypeError("Cannot destructure undefined")},objectWithoutProperties=function(e,r){var t={};for(var n in e)r.indexOf(n)>=0||Object.prototype.hasOwnProperty.call(e,n)&&(t[n]=e[n]);return t},possibleConstructorReturn=function(e,r){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!r||"object"!=typeof r&&"function"!=typeof r?e:r},selfGlobal="undefined"==typeof global?self:global,set=function e(r,t,n,o){var a=Object.getOwnPropertyDescriptor(r,t);if(void 0===a){var i=Object.getPrototypeOf(r);null!==i&&e(i,t,n,o)}else if("value"in a&&a.writable)a.value=n;else{var u=a.set;void 0!==u&&u.call(o,n)}return n},slicedToArray=function(){function e(e,r){var t=[],n=!0,o=!1,a=void 0;try{for(var i,u=e[Symbol.iterator]();!(n=(i=u.next()).done)&&(t.push(i.value),!r||t.length!==r);n=!0);}catch(e){o=!0,a=e}finally{try{!n&&u.return&&u.return()}finally{if(o)throw a}}return t}return function(r,t){if(Array.isArray(r))return r;if(Symbol.iterator in Object(r))return e(r,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),slicedToArrayLoose=function(e,r){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e)){for(var t,n=[],o=e[Symbol.iterator]();!(t=o.next()).done&&(n.push(t.value),!r||n.length!==r););return n}throw new TypeError("Invalid attempt to destructure non-iterable instance")},taggedTemplateLiteral=function(e,r){return Object.freeze(Object.defineProperties(e,{raw:{value:Object.freeze(r)}}))},taggedTemplateLiteralLoose=function(e,r){return e.raw=r,e},temporalRef=function(e,r,t){if(e===t)throw new ReferenceError(r+" is not defined - temporal dead zone");return e},temporalUndefined={},toArray=function(e){return Array.isArray(e)?e:Array.from(e)},toConsumableArray=function(e){if(Array.isArray(e)){for(var r=0,t=Array(e.length);r<e.length;r++)t[r]=e[r];return t}return Array.from(e)},babelHelpers=Object.freeze({jsx:jsx,asyncIterator:asyncIterator,asyncGenerator:asyncGenerator,asyncGeneratorDelegate:asyncGeneratorDelegate,asyncToGenerator:asyncToGenerator,classCallCheck:classCallCheck,createClass:createClass,defineEnumerableProperties:defineEnumerableProperties,defaults:defaults,defineProperty:defineProperty,get:get,inherits:inherits,interopRequireDefault:interopRequireDefault,interopRequireWildcard:interopRequireWildcard,newArrowCheck:newArrowCheck,objectDestructuringEmpty:objectDestructuringEmpty,objectWithoutProperties:objectWithoutProperties,possibleConstructorReturn:possibleConstructorReturn,selfGlobal:selfGlobal,set:set,slicedToArray:slicedToArray,slicedToArrayLoose:slicedToArrayLoose,taggedTemplateLiteral:taggedTemplateLiteral,taggedTemplateLiteralLoose:taggedTemplateLiteralLoose,temporalRef:temporalRef,temporalUndefined:temporalUndefined,toArray:toArray,toConsumableArray:toConsumableArray,typeof:_typeof,extends:_extends,instanceof:_instanceof}),_this=void 0,rootTestFolder=path.dirname(__dirname),recursiveReaddir=function(){var e=asyncToGenerator(regeneratorRuntime.mark(function e(r,t,n){var o,a,i,u,c,l;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:if(o=r.pop(),a=n||{ext:"spec.js"},void 0!==o){e.next=4;break}return e.abrupt("return","");case 4:return e.next=6,readdirPromise(o,t);case 6:return e.t0=function(e){return(o+"/").concat(e)},i=e.sent.map(e.t0),e.next=10,Promise.all(i.map(function(e){return fstatPromise(e)}));case 10:if(e.t1=function(e,r){var t=r.file;return!0===r.isDirectory()?e.directories.push(t):t.includes(a.ext)&&e.specs.push(t),e},e.t2={directories:[],specs:[]},u=e.sent.reduce(e.t1,e.t2),c=u.directories,l=u.specs,!(c.length>0)){e.next=26;break}return e.t4=[],e.t5=toConsumableArray(l),e.t6=babelHelpers,e.next=21,recursiveReaddir([].concat(toConsumableArray(r),toConsumableArray(c)));case 21:e.t7=e.sent,e.t8=e.t6.toConsumableArray.call(e.t6,e.t7),e.t3=e.t4.concat.call(e.t4,e.t5,e.t8),e.next=27;break;case 26:e.t3=l;case 27:return e.abrupt("return",e.t3);case 28:case"end":return e.stop()}},e,_this)}));return function(r,t,n){return e.apply(this,arguments)}}();module.exports=recursiveReaddir;
+'use strict';
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var fs = _interopDefault(require('fs'));
+var path = _interopDefault(require('path'));
+
+var readdirPromise = function readdirPromise(path$$1) {
+  for (var _len = arguments.length, options = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    options[_key - 1] = arguments[_key];
+  }
+
+  return new Promise(function (resolve, reject) {
+    fs.readdir.apply(fs, [path$$1].concat(options, [function (err, data) {
+      if (err) {
+        reject(err);
+      }
+
+      resolve(data);
+    }]));
+  });
+};
+
+var fstatPromise = function fstatPromise(file) {
+  return new Promise(function (resolve, reject) {
+    fs.stat(file, function (err, stats) {
+      if (err) {
+        reject(err);
+      }
+      /**
+       * sending file name back along with file stats for
+       * easy identification
+       */
+      resolve(Object.assign(stats, { file: file }));
+    });
+  });
+};
+
+var _this = undefined;
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+var rootTestFolder = path.dirname(__dirname);
+
+var recursiveReaddir = function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(inputArr, fileOpts, specOpts) {
+    var inputPath, spec, list, _reduce, directories, specs;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            inputPath = inputArr.pop();
+            spec = specOpts || { ext: 'spec.js' };
+
+            // folder with no child directories
+
+            if (!(inputPath === undefined)) {
+              _context.next = 4;
+              break;
+            }
+
+            return _context.abrupt('return', '');
+
+          case 4:
+            _context.next = 6;
+            return readdirPromise(inputPath, fileOpts);
+
+          case 6:
+            _context.t0 = function (item) {
+              return (inputPath + '/').concat(item);
+            };
+
+            list = _context.sent.map(_context.t0);
+            _context.next = 10;
+            return Promise.all(list.map(function (i) {
+              return fstatPromise(i);
+            }));
+
+          case 10:
+            _context.t1 = function (acc, item) {
+              var filepath = item.file;
+
+              if (item.isDirectory() === true) {
+                acc.directories.push(filepath);
+              } else if (filepath.includes(spec.ext)) {
+                acc.specs.push(filepath);
+              }
+
+              return acc;
+            };
+
+            _context.t2 = { directories: [], specs: [] };
+            _reduce = _context.sent.reduce(_context.t1, _context.t2);
+            directories = _reduce.directories;
+            specs = _reduce.specs;
+
+            if (!(directories.length > 0)) {
+              _context.next = 26;
+              break;
+            }
+
+            _context.t4 = [];
+            _context.t5 = _toConsumableArray(specs);
+            _context.t6 = _toConsumableArray;
+            _context.next = 21;
+            return recursiveReaddir([].concat(_toConsumableArray(inputArr), _toConsumableArray(directories)));
+
+          case 21:
+            _context.t7 = _context.sent;
+            _context.t8 = (0, _context.t6)(_context.t7);
+            _context.t3 = _context.t4.concat.call(_context.t4, _context.t5, _context.t8);
+            _context.next = 27;
+            break;
+
+          case 26:
+            _context.t3 = specs;
+
+          case 27:
+            return _context.abrupt('return', _context.t3);
+
+          case 28:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, _this);
+  }));
+
+  return function recursiveReaddir(_x, _x2, _x3) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+module.exports = recursiveReaddir;
