@@ -1,5 +1,5 @@
-import path from 'path';
-import { readdirPromise, fstatPromise } from './fs-promises';
+const path = require('path');
+const { readdirPromise, fstatPromise }  = require('./fs-promises');
 
 const rootTestFolder = path.dirname(__dirname);
 
@@ -33,4 +33,4 @@ const recursiveReaddir = async (inputArr, fileOpts, specOpts) => {
 };
 
 
-export default recursiveReaddir;
+module.exports = { recursiveReaddir };

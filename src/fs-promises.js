@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 const readdirPromise = (path, ...options) => new Promise((resolve, reject) => {
   fs.readdir(path, ...options, (err, data) => {
@@ -25,4 +25,4 @@ const fstatPromise = file => new Promise((resolve, reject) => {
 });
 
 
-export { readdirPromise, fstatPromise };
+module.exports = { readdirPromise, fstatPromise };
