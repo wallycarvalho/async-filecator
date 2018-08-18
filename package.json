@@ -1,5 +1,5 @@
 {
-  "name": "async-readdir",
+  "name": "async-filecator",
   "version": "1.0.0",
   "description": "A small library that promises readdir",
   "main": "dist/bundle.js",
@@ -14,9 +14,9 @@
   "author": "wallycarvalho",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wallycarvalho/async-readdir/issues"
+    "url": "https://github.com/wallycarvalho/async-filecator/issues"
   },
-  "homepage": "https://github.com/wallycarvalho/async-readdir#readme",
+  "homepage": "https://github.com/wallycarvalho/async-filecator#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
